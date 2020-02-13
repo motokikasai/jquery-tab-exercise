@@ -1,4 +1,4 @@
-$(".tab").click(function(e) {
+$(".tab").click(function() {
   $(".tab").removeClass("tab-clicked");
 
   $(this).addClass("tab-clicked");
