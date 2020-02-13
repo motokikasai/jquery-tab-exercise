@@ -2,10 +2,17 @@ $(".tab").click(function(e) {
   $(".tab").removeClass("tab-clicked");
 
   $(this).addClass("tab-clicked");
-  $(this.closest("section").querySelector(".content")).addClass(
-    "content-clicked"
+
+  let toggle = $(this.closest("section").querySelector(".content")).attr(
+    "data-tabs"
   );
-  if ($(".content").hasClass("content-clicked")) {
-    $(".content").removeClass("content-clicked");
+
+  if (toggle === "closed") {
+    $(".content").attr("data-tabs", "closed");
+
+    $(this.closest("section").querySelector(".content")).attr(
+      "data-tabs",
+      "open"
+    );
   }
 });
