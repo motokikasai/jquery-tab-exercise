@@ -10,9 +10,9 @@ $(".tab").click(function() {
   if (toggle === "closed") {
     $(".content").attr("data-tabs", "closed");
 
-    $(this.closest("section").querySelector(".content")).attr(
-      "data-tabs",
-      "open"
-    );
+    $(this.closest("section").querySelector(".content"))
+      .attr("data-tabs", "open")
+      .hide()
+      .fadeIn(1000);
   }
 });
