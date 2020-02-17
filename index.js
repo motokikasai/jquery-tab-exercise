@@ -1,18 +1,21 @@
 $(".tab").click(function() {
-  $(".tab").removeClass("tab-clicked");
+  $(".tab.tab-clicked").removeClass("tab-clicked");
 
   $(this).addClass("tab-clicked");
 
-  let toggle = $(this.closest("section").querySelector(".content")).attr(
-    "data-tabs"
-  );
+  // console.log($(this).next());
 
-  if (toggle === "closed") {
-    $(".content").attr("data-tabs", "closed");
+  // $(this).next().attr(
+  //   "data-tabs"
+  // );
 
-    $(this.closest("section").querySelector(".content"))
-      .attr("data-tabs", "open")
-      .hide()
-      .fadeIn(1000);
-  }
+  // if (toggle === "closed") {
+  // $(".content").attr("data-tabs", "closed");
+  $(".content").hide();
+  $(this)
+    .next()
+    .fadeIn(1000);
+  // .attr("data-tabs", "open")
+  // .hide()
+  // }
 });
