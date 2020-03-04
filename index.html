@@ -10,12 +10,20 @@
   <body>
     <h1>hello jQuery!</h1>
     <main>
+      <nav>
+        <ul>
+          <li class="tab" data-tab="tab-1">Tab 1</li>
+          <li class="tab" data-tab="tab-2">Tab 2</li>
+          <li class="tab" data-tab="tab-3">Tab 3</li>
+        </ul>
+      </nav>
+
       <section class="container">
         <section>
-          <div class="tab first-tab">
+          <!-- <div class="tab first-tab">
             <h1 class="tab-header">Tab 1</h1>
-          </div>
-          <div class="content" data-tabs="open">
+          </div> -->
+          <div id="tab-1" class="content current">
             <div class="body">
               <h3>Tab 01</h3>
               <p>
@@ -28,10 +36,10 @@
           </div>
         </section>
         <section>
-          <div class="tab second-tab">
+          <!-- <div class="tab second-tab">
             <h1 class="tab-header">Tab 2</h1>
-          </div>
-          <div class="content" data-tabs="closed">
+          </div> -->
+          <div id="tab-2" class="content" data-tabs="tab-2">
             <div class="body">
               <h3>Tab 02</h3>
               <p>
@@ -44,10 +52,10 @@
           </div>
         </section>
         <section>
-          <div class="tab third-tab">
+          <!-- <div class="tab third-tab">
             <h1 class="tab-header">Tab 3</h1>
-          </div>
-          <div class="content" data-tabs="closed">
+          </div> -->
+          <div id="tab-3" class="content" data-tabs="tab-3">
             <div class="body">
               <h3>Tab 03</h3>
               <p>
